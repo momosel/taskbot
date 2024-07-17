@@ -1,0 +1,16 @@
+# FindTgBot.cmake
+find_path(TGBOT_INCLUDE_DIR NAMES TgBot/Bot.h)
+find_library(TGBOT_LIBRARY NAMES TgBot)
+
+if (TGBOT_INCLUDE_DIR AND TGBOT_LIBRARY)
+    set(TGBOT_FOUND TRUE)
+endif()
+
+if (TGBOT_FOUND)
+    set(TGBOT_INCLUDE_DIRS ${TGBOT_INCLUDE_DIR})
+    set(TGBOT_LIBRARIES ${TGBOT_LIBRARY})
+endif()
+
+mark_as_advanced(TGBOT_INCLUDE_DIR TGBOT_LIBRARY)
+
+

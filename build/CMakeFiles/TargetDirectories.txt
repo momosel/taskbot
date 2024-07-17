@@ -1,0 +1,3 @@
+/Users/irinakosse/Desktop/RemindMeBot/build/CMakeFiles/TelegramBot.dir
+/Users/irinakosse/Desktop/RemindMeBot/build/CMakeFiles/edit_cache.dir
+/Users/irinakosse/Desktop/RemindMeBot/build/CMakeFiles/rebuild_cache.dir
