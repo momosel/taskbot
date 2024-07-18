@@ -1971,4 +1971,7 @@ CMakeFiles/TelegramBot.dir/TelegramBot.cpp.o: \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/net/TgWebhookLocalServer.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/net/TgWebhookServer.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/net/TgWebhookTcpServer.h \
-  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/tools/FileTools.h
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/tools/FileTools.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/map \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__tree \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/regex

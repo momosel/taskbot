@@ -1,93 +1,165 @@
 #include <tgbot/tgbot.h>
 #include <iostream>
-#include <string>
+#include <fstream>
+#include <map>
 #include <vector>
 #include <sstream>
+#include <regex>
+#include <cstdlib> // Для replit
 
 using namespace std;
 using namespace TgBot;
 
+map<int64_t, vector<string>> tasksMap;
+map<int64_t, bool> addTaskMode;
+map<int64_t, bool> deleteTaskMode;
+
+// Функція для збереження завдань у файл
+void saveTasksToFile() {
+    ofstream outFile("tasks.txt");
+    for (const auto& pair : tasksMap) {
+        outFile << pair.first << ":";
+        for (const auto& task : pair.second) {
+            outFile << task << ",";
+        }
+        outFile << endl;
+    }
+}
+
+// Функція для завантаження завдань із файлу
+void loadTasksFromFile() {
+    ifstream inFile("tasks.txt");
+    if (!inFile.is_open()) return;
+
+    string line;
+    while (getline(inFile, line)) {
+        istringstream iss(line);
+        int64_t chatId;
+        char colon;
+        iss >> chatId >> colon;
+        
+        string task;
+        vector<string> tasks;
+        while (getline(iss, task, ',')) {
+            if (!task.empty()) {
+                tasks.push_back(task);
+            }
+        }
+        tasksMap[chatId] = tasks;
+    }
+}
+
+// Функція для відображення завдань
+void showTasks(Bot& bot, const Message::Ptr& message) {
+    int64_t chatId = message->chat->id;
+    if (tasksMap[chatId].empty()) {
+        bot.getApi().sendMessage(chatId, "Список справ порожній.");
+        return;
+    }
+
+    ostringstream oss;
+    oss << "Ваші справи:\n";
+    for (size_t i = 0; i < tasksMap[chatId].size(); ++i) {
+        oss << i + 1 << ". " << tasksMap[chatId][i] << "\n";
+    }
+    bot.getApi().sendMessage(chatId, oss.str());
+}
+
 int main() {
+
     TgBot::Bot bot("7225066297:AAF-2ifDCQRdqdZW07tOwHpEiMiakxninK4");
+    
+    //const char* token = getenv("7225066297:AAF-2ifDCQRdqdZW07tOwHpEiMiakxninK4");
+    //if (!token) {
+    //    cerr << "Помилка: BOT_TOKEN не встановлений." << endl;
+    //    return 1;
+    //}
 
-    vector<string> cases;
-    bool canAddCases = false;
-    bool awaitingDeletion = false;
+    // Завантаження завдань із файлу при старті бота
+    loadTasksFromFile();
 
-    //start
-    bot.getEvents().onCommand("start", [&bot, &canAddCases, &awaitingDeletion](const Message::Ptr& message) {
-        canAddCases = false;  
-        awaitingDeletion = false;
-        string welcomeMessage = "Давайте заплануємо ваш день\n";
-        welcomeMessage += "Команди:\n";
-        welcomeMessage += "/addcase - Додати справу\n";
-        welcomeMessage += "/viewcases - Переглянути список справ\n";
-        welcomeMessage += "/deletecase - Видалити справу за номером";
-        bot.getApi().sendMessage(message->chat->id, welcomeMessage);
+    //TgBot::Bot bot(token);
+
+    // Обробка команди /start
+    bot.getEvents().onCommand("start", [&bot](const Message::Ptr& message) {
+        bot.getApi().sendMessage(message->chat->id, "Давайте заплануємо ваш день.\n"
+                                                    "/addcase щоб додати справу.\n"
+                                                    "/showcases щоб показати список справ.\n"
+                                                    "/deletecase щоб видалити справу.");
+        addTaskMode[message->chat->id] = false;
     });
 
-    //addcase
-    bot.getEvents().onCommand("addcase", [&bot, &canAddCases](const Message::Ptr& message) {
-        canAddCases = true;
-        bot.getApi().sendMessage(message->chat->id, "Напишіть одну або кілька ваших справ");
+    // Обробка команди /addcase
+    bot.getEvents().onCommand("addcase", [&bot](const Message::Ptr& message) {
+        bot.getApi().sendMessage(message->chat->id, "Напишіть одну або декілька ваших справ. Введіть їх в одному повідомленні через кому");
+        addTaskMode[message->chat->id] = true;
     });
 
-    //viewcases
-    bot.getEvents().onCommand("viewcases", [&bot, &cases](const Message::Ptr& message) {
-        if (cases.empty()) {
-            bot.getApi().sendMessage(message->chat->id, "Список справ порожній");
-        } else {
-            string caseList = "Ваш список справ:\n";
-            for (size_t i = 0; i < cases.size(); ++i) {
-                caseList += to_string(i + 1) + ". " + cases[i] + "\n";
-            }
-            bot.getApi().sendMessage(message->chat->id, caseList);
-        }
+    // Обробка команди /showcases
+    bot.getEvents().onCommand("showcases", [&bot](const Message::Ptr& message) {
+        showTasks(bot, message);
+        addTaskMode[message->chat->id] = false;
     });
 
-    //deletecase
-    bot.getEvents().onCommand("deletecase", [&bot, &cases, &awaitingDeletion](const Message::Ptr& message) {
-        if (cases.empty()) {
-            bot.getApi().sendMessage(message->chat->id, "Список справ порожній");
-            return;
-        }
-        awaitingDeletion = true;
-        string caseList = "Ваш список справ:\n";
-        for (size_t i = 0; i < cases.size(); ++i) {
-            caseList += to_string(i + 1) + ". " + cases[i] + "\n";
-        }
-        bot.getApi().sendMessage(message->chat->id, caseList + "\nВведіть номер справи, яку ви хочете видалити");
+    // Обробка команди /deletecase
+    bot.getEvents().onCommand("deletecase", [&bot](const Message::Ptr& message) {
+        showTasks(bot, message);
+        bot.getApi().sendMessage(message->chat->id, "Напишіть номери справ, які ви хочете видалити, через кому");
+        addTaskMode[message->chat->id] = false;
+        deleteTaskMode[message->chat->id] = true;
     });
 
-    //все соо
-    bot.getEvents().onAnyMessage([&bot, &cases, &canAddCases, &awaitingDeletion](const Message::Ptr& message) {
-        if (StringTools::startsWith(message->text, "/")) {
-            return;
-        }
+    bot.getEvents().onAnyMessage([&bot](const Message::Ptr& message) {
+        int64_t chatId = message->chat->id;
 
-        //удаление дела
-        if (awaitingDeletion) {
+        if (addTaskMode[chatId]) 
+        {
             istringstream iss(message->text);
-            int caseNumber;
-            if (!(iss >> caseNumber) || caseNumber <= 0 || static_cast<size_t>(caseNumber) > cases.size()) {
-                bot.getApi().sendMessage(message->chat->id, "Невірний номер справи. Будь ласка, введіть правильний номер.");
-            } else {
-                cases.erase(cases.begin() + caseNumber - 1);
-                bot.getApi().sendMessage(message->chat->id, "Справу видалено.");
+            string task;
+            while (getline(iss, task, ',')) 
+            {
+                tasksMap[chatId].push_back(task);
             }
-            awaitingDeletion = false;
-            return;
-        }
 
-        if (canAddCases) {
-            try {
-                cases.push_back(message->text);
-                bot.getApi().sendMessage(message->chat->id, "Справу додано: " + message->text);
-            } catch (const std::exception& e) {
-                bot.getApi().sendMessage(message->chat->id, "Помилка при додаванні справи: " + string(e.what()));
+            saveTasksToFile();
+            bot.getApi().sendMessage(chatId, "Справу(и) додано");
+            addTaskMode[chatId] = false;
+
+        } 
+        else if (deleteTaskMode[chatId]) 
+        {
+            vector<int> taskNums;
+            istringstream iss(message->text);
+            string num;
+            while (getline(iss, num, ',')) 
+            {
+                try {
+                    taskNums.push_back(stoi(num) - 1);
+                } catch (const invalid_argument&) {
+                    bot.getApi().sendMessage(chatId, "Введіть коректні номери справ через кому");
+                    return;
+                }
             }
-        } else {
-            bot.getApi().sendMessage(message->chat->id, "Спочатку використовуйте команду /addcase для додавання справ");
+
+            // Видалення завдань
+            sort(taskNums.begin(), taskNums.end(), greater<int>());
+            for (int taskNum : taskNums) 
+            {
+                if (taskNum < 0 || taskNum >= tasksMap[chatId].size()) 
+                {
+                    bot.getApi().sendMessage(chatId, "Некоректний номер справи");
+                    return;
+                } 
+                else 
+                {
+                    tasksMap[chatId].erase(tasksMap[chatId].begin() + taskNum);
+                }
+            }
+
+            saveTasksToFile();
+            bot.getApi().sendMessage(chatId, "Справу(и) видалено");
+            showTasks(bot, message);
+            deleteTaskMode[chatId] = false;
         }
     });
 
@@ -100,10 +172,6 @@ int main() {
         }
     } catch (TgBot::TgException& e) {
         printf("error: %s\n", e.what());
-    } catch (const std::exception& e) {
-        printf("Standard exception: %s\n", e.what());
-    } catch (...) {
-        printf("Unknown error occurred\n");
     }
 
     return 0;
