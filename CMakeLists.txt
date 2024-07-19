@@ -3,30 +3,26 @@ project(RemindMeBot)
 
 set(CMAKE_CXX_STANDARD 14)
 
-# Указываем пути к заголовочным файлам
 include_directories(
     ${CMAKE_SOURCE_DIR}/libs/openssl/include
     ${CMAKE_SOURCE_DIR}/libs/curl/include
     ${CMAKE_SOURCE_DIR}/libs/tgbot-cpp/include
-    /usr/local/include  # Путь к заголовкам Boost
+    /usr/local/include #без локал для линукс
 )
 
-# Указываем пути к библиотекам
 link_directories(
     ${CMAKE_SOURCE_DIR}/libs/openssl/lib
     ${CMAKE_SOURCE_DIR}/libs/curl/lib
     ${CMAKE_SOURCE_DIR}/libs/tgbot-cpp/lib
-    /usr/local/lib  # Путь к библиотекам Boost
+    /usr/local/lib #без локал для линукс
 )
 
-# Добавляем исполняемый файл
 add_executable(TelegramBot TelegramBot.cpp)
 
-# Связываем библиотеки
 target_link_libraries(TelegramBot
     TgBot
     ssl
     crypto
     curl
-    boost_system  # Убедитесь, что эта библиотека доступна
+    boost_system
 )
