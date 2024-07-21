@@ -3,6 +3,10 @@ project(RemindMeBot)
 
 set(CMAKE_CXX_STANDARD 14)
 
+set(TGBOT_CPP_ROOT "${CMAKE_SOURCE_DIR}/libs/tgbot-cpp")
+include_directories(${TGBOT_CPP_ROOT}/include)
+link_directories(${TGBOT_CPP_ROOT}/lib)
+
 include_directories(
     ${CMAKE_SOURCE_DIR}/libs/openssl/include
     ${CMAKE_SOURCE_DIR}/libs/curl/include

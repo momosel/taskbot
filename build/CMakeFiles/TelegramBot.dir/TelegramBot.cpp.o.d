@@ -369,35 +369,49 @@ CMakeFiles/TelegramBot.dir/TelegramBot.cpp.o: \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/User.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/Chat.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ChatPhoto.h \
-  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ChatPermissions.h \
-  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ChatLocation.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/Birthdate.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/BusinessIntro.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/Sticker.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/PhotoSize.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/File.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/MaskPosition.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/BusinessLocation.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/Location.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/BusinessOpeningHours.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/BusinessOpeningHoursInterval.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__bit_reference \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__split_buffer \
-  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/MessageEntity.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ReactionType.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ChatPermissions.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ChatLocation.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/MessageOrigin.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ExternalReplyInfo.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/LinkPreviewOptions.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/Animation.h \
-  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/PhotoSize.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/Audio.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/Document.h \
-  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/Sticker.h \
-  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/File.h \
-  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/MaskPosition.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/Story.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/Video.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/VideoNote.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/Voice.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/Contact.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/Dice.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/Game.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/MessageEntity.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/Giveaway.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/GiveawayWinners.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/Invoice.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/Poll.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/PollOption.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/Venue.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/TextQuote.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/MessageAutoDeleteTimerChanged.h \
-  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/Invoice.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/SuccessfulPayment.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/OrderInfo.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ShippingAddress.h \
-  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/UserShared.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/UsersShared.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/SharedUser.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ChatShared.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/WriteAccessAllowed.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/PassportData.h \
@@ -405,12 +419,15 @@ CMakeFiles/TelegramBot.dir/TelegramBot.cpp.o: \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/PassportFile.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/EncryptedCredentials.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ProximityAlertTriggered.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ChatBoostAdded.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ForumTopicCreated.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ForumTopicEdited.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ForumTopicClosed.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ForumTopicReopened.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/GeneralForumTopicHidden.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/GeneralForumTopicUnhidden.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/GiveawayCreated.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/GiveawayCompleted.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/VideoChatScheduled.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/VideoChatStarted.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/VideoChatEnded.h \
@@ -421,7 +438,13 @@ CMakeFiles/TelegramBot.dir/TelegramBot.cpp.o: \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/InlineKeyboardButton.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/WebAppInfo.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/LoginUrl.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/SwitchInlineQueryChosenChat.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/CallbackGame.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/BusinessConnection.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/BusinessMessagesDeleted.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/MessageReactionUpdated.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/MessageReactionCountUpdated.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ReactionCount.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/InlineQuery.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ChosenInlineResult.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/CallbackQuery.h \
@@ -432,12 +455,22 @@ CMakeFiles/TelegramBot.dir/TelegramBot.cpp.o: \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ChatMember.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ChatInviteLink.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ChatJoinRequest.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ChatBoostUpdated.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ChatBoost.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ChatBoostSource.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ChatBoostRemoved.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/WebhookInfo.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/MessageId.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/InaccessibleMessage.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ReplyParameters.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/MessageOriginUser.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/MessageOriginHiddenUser.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/MessageOriginChat.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/MessageOriginChannel.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/UserProfilePhotos.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ReplyKeyboardMarkup.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/KeyboardButton.h \
-  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/KeyboardButtonRequestUser.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/KeyboardButtonRequestUsers.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/KeyboardButtonRequestChat.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ChatAdministratorRights.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/KeyboardButtonPollType.h \
@@ -449,6 +482,8 @@ CMakeFiles/TelegramBot.dir/TelegramBot.cpp.o: \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ChatMemberRestricted.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ChatMemberLeft.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ChatMemberBanned.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ReactionTypeEmoji.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ReactionTypeCustomEmoji.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ForumTopic.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/BotCommand.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/BotCommandScope.h \
@@ -459,10 +494,17 @@ CMakeFiles/TelegramBot.dir/TelegramBot.cpp.o: \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/BotCommandScopeChat.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/BotCommandScopeChatAdministrators.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/BotCommandScopeChatMember.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/BotName.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/BotDescription.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/BotShortDescription.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/MenuButton.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/MenuButtonCommands.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/MenuButtonWebApp.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/MenuButtonDefault.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ChatBoostSourcePremium.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ChatBoostSourceGiftCode.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ChatBoostSourceGiveaway.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/UserChatBoosts.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/ResponseParameters.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/InputMedia.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/InputMediaPhoto.h \
@@ -472,6 +514,8 @@ CMakeFiles/TelegramBot.dir/TelegramBot.cpp.o: \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/InputMediaAudio.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/InputMediaDocument.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/StickerSet.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/InputSticker.h \
+  /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/InlineQueryResultsButton.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/InlineQueryResult.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/InlineQueryResultArticle.h \
   /Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include/tgbot/types/InputMessageContent.h \

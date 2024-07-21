@@ -4,7 +4,7 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/irinakosse/Desktop/RemindMeBot/libs/openssl/include -I/Users/irinakosse/Desktop/RemindMeBot/libs/curl/include -I/Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include -I/usr/local/include
+CXX_INCLUDES = -I/Users/irinakosse/Desktop/RemindMeBot/libs/tgbot-cpp/include -I/Users/irinakosse/Desktop/RemindMeBot/libs/openssl/include -I/Users/irinakosse/Desktop/RemindMeBot/libs/curl/include -I/usr/local/include
 
 CXX_FLAGS = -std=gnu++14 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2
 
